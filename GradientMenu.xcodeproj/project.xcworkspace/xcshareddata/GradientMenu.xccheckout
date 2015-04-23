@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4C627B7B-2CD8-49DA-BC90-C18E654EEDB0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GradientMenu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>511C7B8B95EBC60E0CCB26EFC4F36126F9F90C56</key>
+		<string>github.com:jcolem11/JCGradientMenu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GradientMenu.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>511C7B8B95EBC60E0CCB26EFC4F36126F9F90C56</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jcolem11/JCGradientMenu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>511C7B8B95EBC60E0CCB26EFC4F36126F9F90C56</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>511C7B8B95EBC60E0CCB26EFC4F36126F9F90C56</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JCGradientMenu</string>
+		</dict>
+	</array>
+</dict>
+</plist>

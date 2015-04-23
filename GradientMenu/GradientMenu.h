@@ -7,15 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class MenuItem;
+#import "MenuItem.h"
 
 @interface GradientMenu : UIControl
 
+@property (strong, nonatomic) UIFont *itemFont; 
 @property (strong, nonatomic) UIColor *startColor;
 @property (strong, nonatomic) UIColor *endColor;
 @property (strong, nonatomic) UIColor *textColor;
 @property (strong, nonatomic) NSArray *items;
 @property (strong, nonatomic) NSString *menuTitle;
+
+- (instancetype)initWithStartColor:(UIColor*)startColor endColor:(UIColor*)endColor;
 
 @end

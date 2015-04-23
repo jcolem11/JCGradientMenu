@@ -16,11 +16,12 @@
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (assign, nonatomic) BOOL expanded;
 
+
 @end
 
 @implementation GradientMenu
 
-#pragma mark - Init
+#pragma mark - Init Methods
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self == [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
@@ -28,6 +29,14 @@
         [self addSubview:self.titleLabel];
         self.titleLabel.userInteractionEnabled = NO;
         self.textColor = [UIColor whiteColor];
+    }
+    return self;
+}
+
+-(instancetype)initWithStartColor:(UIColor *)startColor endColor:(UIColor *)endColor{
+    if (self == [super init]) {
+        _startColor = startColor;
+        _endColor = endColor; 
     }
     return self;
 }
@@ -60,20 +69,21 @@
     [self setup];
 }
 
-#pragma mark - Lazy loaded properties
--(NSArray *)items{
-    if (!_items) {
-        _items = @[@"Home", @"Score", @"Yo Moms", @"Bye"];
-    }
-    return _items;
-}
+#pragma mark - Properties
 
 
 #pragma mark - Private Methods
+
+// add default values to prevent this
 -(void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
     self.titleLabel.textColor = textColor;
     
+}
+
+-(void)setItems:(NSArray *)items{
+    _items = items;
+    [self setup];
 }
 
 - (UIColor*)colorForItemAtIndex:(NSInteger)index{
@@ -84,19 +94,22 @@
 -(void)setup{
     [self addTarget:self action:@selector(display) forControlEvents:UIControlEventTouchUpInside];
     NSMutableArray *tmp = [NSMutableArray array];
-    [self.items enumerateObjectsUsingBlock:^(NSString *string, NSUInteger idx, BOOL *stop) {
-        UILabel *label = [[UILabel alloc]initWithFrame:self.bounds];
-        UIView *view = [[UIView alloc] initWithFrame:self.bounds];
-        label.text = string;
-        label.textColor = self.textColor;
-        label.backgroundColor = [self colorForItemAtIndex:idx];
-        [view addSubview:label];
-        label.userInteractionEnabled = NO;
-        label.textAlignment = NSTextAlignmentCenter;
-        view.userInteractionEnabled = NO;
-        view.clipsToBounds = YES;
-        idx == 0 ? [self insertSubview:view belowSubview:self.titleLabel] : [self insertSubview:view belowSubview:[tmp objectAtIndex:idx - 1 ]];
-        [tmp addObject:view];
+    [self.items enumerateObjectsUsingBlock:^(MenuItem *item, NSUInteger idx, BOOL *stop) {
+//        UILabel *label = [[UILabel alloc]initWithFrame:self.bounds];
+//        UIView *view = [[UIView alloc] initWithFrame:self.bounds];
+//        label.text = string;
+//        label.textColor = self.textColor;
+//        label.backgroundColor = [self colorForItemAtIndex:idx];
+//        [view addSubview:label];
+//        label.userInteractionEnabled = NO;
+//        label.textAlignment = NSTextAlignmentCenter;
+//        view.userInteractionEnabled = NO;
+//        view.clipsToBounds = YES;
+
+            item.backgroundColor = [self colorForItemAtIndex:idx];
+            item.frame = self.bounds;
+            idx == 0 ? [self insertSubview:item belowSubview:self.titleLabel] : [self insertSubview:item belowSubview:[tmp objectAtIndex:idx - 1 ]];
+            [tmp addObject:item];
     }];
     self.menuItems = [NSArray arrayWithArray:tmp];
 }

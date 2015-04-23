@@ -18,8 +18,34 @@
 
 @implementation DemoMenuController
 
+
 -(void)viewDidLoad{
-    [super viewDidLoad]; 
+    [super viewDidLoad];
+    self.menu.startColor = [UIColor purpleColor];
+    self.menu.endColor = [UIColor orangeColor];
+    
+    MenuItem *item1 = [[MenuItem alloc] initWithTitle:@"Home" action:^{
+        //
+    }];
+    
+    MenuItem *item2 = [[MenuItem alloc] initWithTitle:@"Friends" action:^{
+        //
+    }];
+    
+    MenuItem *item3 = [[MenuItem alloc] initWithTitle:@"Explore" action:^{
+        //
+    }];
+    
+    MenuItem *item4 = [[MenuItem alloc] initWithTitle:@"Upload" action:^{
+        //
+    }];
+    
+    MenuItem *item5 = [[MenuItem alloc] initWithTitle:@"Upload" action:^{
+        //
+    }];
+    
+    self.menu.items = @[item1, item2, item3, item4, item5];
 }
+
 
 @end
