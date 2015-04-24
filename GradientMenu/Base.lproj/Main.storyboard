@@ -109,11 +109,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5h-Tk-tp2" customClass="GradientMenu">
-                                <rect key="frame" x="200" y="243" width="200" height="50"/>
+                                <rect key="frame" x="200" y="248" width="200" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="HJ4-BO-Nze"/>
-                                    <constraint firstAttribute="height" constant="50" id="jJP-Sp-2PG"/>
+                                    <constraint firstAttribute="height" constant="40" id="jJP-Sp-2PG"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -11,6 +11,7 @@
 
 @interface MenuItem : UIView
 
+@property (strong, nonatomic) UIFont *font; 
 @property (strong, nonatomic) NSString *title;
 @property (copy, nonatomic) void (^action)();
 @property (assign, nonatomic) BOOL displaying;

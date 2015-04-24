@@ -21,7 +21,7 @@
 -(UILabel *)titleLabel{
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] initWithFrame:self.bounds];
-        _titleLabel.backgroundColor = [UIColor purpleColor];
+        _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;
@@ -30,6 +30,12 @@
 -(void)setTitle:(NSString *)title{
     _title = title;
     self.titleLabel.text = title;
+}
+
+
+-(void)setFont:(UIFont *)font{
+    _font = font;
+    self.titleLabel.font = font;
 }
 
 #pragma mark - 
@@ -64,8 +70,13 @@
 
 -(void)setUp{
     self.titleLabel.text = self.title;
+    self.titleLabel.textColor = [UIColor whiteColor]; 
     [self addSubview:self.titleLabel];
-    NSLog(@"%@", self.titleLabel) ;
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    self.titleLabel.frame = self.bounds;
 }
 
 @end
