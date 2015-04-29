@@ -13,6 +13,7 @@
 @interface DemoMenuController()
 
 @property (weak, nonatomic) IBOutlet GradientMenu *menu;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -21,30 +22,40 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.menu.startColor = [UIColor colorWithRed:0.46 green:0.22 blue:0.4 alpha:1];
-    self.menu.endColor = [UIColor colorWithRed:0.74 green:0.36 blue:0.92 alpha:1];
-    self.menu.itemFont = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
-    MenuItem *item1 = [[MenuItem alloc] initWithTitle:@"Home" action:^{
-        //
-    }];
+    self.menu.endColor = [UIColor colorWithRed:0.99 green:0.89 blue:0.65 alpha:1];
+    self.menu.startColor = [UIColor colorWithRed:0.4 green:0.25 blue:0.45 alpha:1];
+    self.menu.itemFont = [UIFont fontWithName:@"Avenir Next" size:18];
     
-    MenuItem *item2 = [[MenuItem alloc] initWithTitle:@"Friends" action:^{
-        //
-    }];
+//    MenuItem *item1 = [[MenuItem alloc] initWithTitle:@"Home" action:^{
+//        NSLog(@"Menu 1 pressed!");
+//    }];
+//    
+//    MenuItem *item2 = [[MenuItem alloc] initWithTitle:@"Friends" action:^{
+//        //
+//    }];
+//    
+//    MenuItem *item3 = [[MenuItem alloc] initWithTitle:@"Explore" action:^{
+//        //
+//    }];
+//    
+//    MenuItem *item4 = [[MenuItem alloc] initWithTitle:@"Upload" action:^{
+//        //
+//    }];
+//    
+//    MenuItem *item5 = [[MenuItem alloc] initWithTitle:@"Log Out" action:^{
+//        //
+//    }];
+//
+    NSMutableArray *array = [NSMutableArray array];
     
-    MenuItem *item3 = [[MenuItem alloc] initWithTitle:@"ExploreExploreExplore" action:^{
-        //
-    }];
+    for (int i =0; i < 5; i ++) {
+        MenuItem *item = [[MenuItem alloc] initWithTitle:[NSString stringWithFormat:@"%i",i + 1] action:^{
+            self.label.text = [NSString stringWithFormat:@"Item # %i Pressed!", i + 1];
+        }];
+        [array addObject:item];
+    }
     
-    MenuItem *item4 = [[MenuItem alloc] initWithTitle:@"Upload" action:^{
-        //
-    }];
-    
-    MenuItem *item5 = [[MenuItem alloc] initWithTitle:@"Log Out" action:^{
-        //
-    }];
-    
-    self.menu.items = @[item1, item2, item3, item4, item5];
+    self.menu.items = [NSArray arrayWithArray:array];
 }
 
 

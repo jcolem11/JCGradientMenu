@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpy-7v-cgx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpy-7v-cgx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -109,22 +109,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5h-Tk-tp2" customClass="GradientMenu">
-                                <rect key="frame" x="200" y="248" width="200" height="40"/>
+                                <rect key="frame" x="200" y="476" width="200" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="HJ4-BO-Nze"/>
                                     <constraint firstAttribute="height" constant="40" id="jJP-Sp-2PG"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYc-Tz-wPS">
+                                <rect key="frame" x="150" y="93" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L0g-nx-35z"/>
+                                    <constraint firstAttribute="width" constant="300" id="iyw-gB-FpV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cYc-Tz-wPS" secondAttribute="centerX" id="DRA-RO-fpb"/>
+                            <constraint firstItem="uky-Xi-HfW" firstAttribute="top" secondItem="R5h-Tk-tp2" secondAttribute="bottom" constant="20" id="Rkm-ey-HeP"/>
+                            <constraint firstAttribute="centerY" secondItem="cYc-Tz-wPS" secondAttribute="centerY" constant="150" id="abm-v4-B0J"/>
                             <constraint firstAttribute="centerY" secondItem="R5h-Tk-tp2" secondAttribute="centerY" id="bfL-vk-WMM"/>
                             <constraint firstAttribute="centerX" secondItem="R5h-Tk-tp2" secondAttribute="centerX" id="rHr-Xo-Jgn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bfL-vk-WMM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uvu-R0-iye"/>
                     <connections>
+                        <outlet property="label" destination="cYc-Tz-wPS" id="KRM-Xa-olQ"/>
                         <outlet property="menu" destination="R5h-Tk-tp2" id="Mdm-tW-6CS"/>
                     </connections>
                 </viewController>

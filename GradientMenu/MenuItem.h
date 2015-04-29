@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @import UIKit;
 
-@interface MenuItem : UIView
+@interface MenuItem : UIControl
 
 @property (strong, nonatomic) UIFont *font; 
 @property (strong, nonatomic) NSString *title;
