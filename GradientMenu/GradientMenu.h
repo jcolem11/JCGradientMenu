@@ -12,12 +12,11 @@
 @interface GradientMenu : UIControl
 
 @property (assign, nonatomic) NSTimeInterval animationDuration;
-@property (strong, nonatomic) UIFont *itemFont; 
 @property (strong, nonatomic) UIColor *startColor;
 @property (strong, nonatomic) UIColor *endColor;
 @property (strong, nonatomic) UIColor *textColor;
+@property (strong, nonatomic) UIFont *itemFont;
 @property (strong, nonatomic) NSArray *items;
-@property (strong, nonatomic) NSString *menuTitle;
 
 - (instancetype)initWithStartColor:(UIColor*)startColor endColor:(UIColor*)endColor;
 

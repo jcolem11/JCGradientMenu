@@ -12,11 +12,32 @@
 
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (assign,nonatomic) CGAffineTransform currentTransform;
+
 @end
 
 @implementation MenuItem
 
-#pragma mark - 
+
+#pragma mark - Init Methods
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.displaying = NO;
+        [self setUp];
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title action:(void (^)())action{
+    if (self == [super init]) {
+        _title = title;
+        _action = action;
+        [self setUp];
+    }
+    return self;
+}
+
+# pragma mark - Properties
 
 -(UILabel *)titleLabel{
     if (!_titleLabel) {
@@ -38,48 +59,18 @@
     self.titleLabel.font = font;
 }
 
-#pragma mark - 
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
-        self.displaying = NO;
-        [self setUp];
-    }
-    return self;
-}
-
-- (instancetype)initWithTitle:(NSString *)title action:(void (^)())action{
-    if (self == [super init]) {
-        _title = title;
-        _action = action;
-        [self setUp];
-    }
-    return self;
-}
 
 - (void)setDisplaying:(BOOL)displaying{
     _displaying = displaying;
     self.userInteractionEnabled = displaying;
 }
 
--(void)setSelected:(BOOL)selected{
-    [super setSelected:selected];
-}
+#pragma mark - Layout
 
--(void)setHighlighted:(BOOL)highlighted{
-    [super setHighlighted:highlighted];
-    
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.titleLabel.frame = self.bounds;
 }
-
-- (void)highLightAnimation{
-    
-}
-
-//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-//    if (self.action) {
-//        self.action();
-//    }
-//}
 
 - (void)setUp{
     self.titleLabel.text = self.title;
@@ -87,12 +78,19 @@
     [self addSubview:self.titleLabel];
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    self.titleLabel.frame = self.bounds;
-}
-
 #pragma mark - Touch Tracking
+
+- (void) jiggle{
+    [UIView animateWithDuration:.3 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:1 options:0 animations:^{
+        self.currentTransform = self.currentTransform;
+        self.transform = self.currentTransform;
+    } completion:^(BOOL finished) {
+        
+    }];
+    if (self.action) {
+        self.action();
+    }
+}
 
 -(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     [super beginTrackingWithTouch:touch withEvent:event];
@@ -105,21 +103,9 @@
     return YES;
 }
 
--(BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
-    [super continueTrackingWithTouch:touch withEvent:event];
-    return YES;
-}
-
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     [super endTrackingWithTouch:touch withEvent:event];
-    [UIView animateWithDuration:.3 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:1 options:0 animations:^{
-        self.currentTransform = self.currentTransform;
-        self.transform = self.currentTransform;
-    } completion:^(BOOL finished) {
+    [self jiggle]; 
 
-    }];
-    if (self.action) {
-        self.action();
-    }
 }
 @end

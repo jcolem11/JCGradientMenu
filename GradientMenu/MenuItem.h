@@ -17,5 +17,5 @@
 @property (assign, nonatomic) BOOL displaying;
 
 -(instancetype)initWithTitle:(NSString *)title action:(void(^)())action;
-- (void)setUp; 
+
 @end

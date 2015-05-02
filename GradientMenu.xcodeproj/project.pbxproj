@@ -12,7 +12,6 @@
 		EB15F9C61ADB5CAE0097920B /* DemoMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB15F9C51ADB5CAE0097920B /* DemoMenuController.m */; };
 		EB98CB271ADAE32A00485105 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98CB261ADAE32A00485105 /* main.m */; };
 		EB98CB2A1ADAE32A00485105 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98CB291ADAE32A00485105 /* AppDelegate.m */; };
-		EB98CB2D1ADAE32B00485105 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98CB2C1ADAE32B00485105 /* ViewController.m */; };
 		EB98CB301ADAE32B00485105 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB98CB2E1ADAE32B00485105 /* Main.storyboard */; };
 		EB98CB321ADAE32B00485105 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB98CB311ADAE32B00485105 /* Images.xcassets */; };
 		EB98CB411ADAE32B00485105 /* GradientMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98CB401ADAE32B00485105 /* GradientMenuTests.m */; };
@@ -41,8 +40,6 @@
 		EB98CB261ADAE32A00485105 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB98CB281ADAE32A00485105 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB98CB291ADAE32A00485105 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EB98CB2B1ADAE32A00485105 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EB98CB2C1ADAE32B00485105 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EB98CB2F1ADAE32B00485105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB98CB311ADAE32B00485105 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB98CB3A1ADAE32B00485105 /* GradientMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,8 +140,6 @@
 		EB98CB4D1ADAE36F00485105 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				EB98CB2B1ADAE32A00485105 /* ViewController.h */,
-				EB98CB2C1ADAE32B00485105 /* ViewController.m */,
 				EB98CB2E1ADAE32B00485105 /* Main.storyboard */,
 				EB15F9C41ADB5CAE0097920B /* DemoMenuController.h */,
 				EB15F9C51ADB5CAE0097920B /* DemoMenuController.m */,
@@ -252,7 +247,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB98CB4C1ADAE36400485105 /* GradientMenu.m in Sources */,
-				EB98CB2D1ADAE32B00485105 /* ViewController.m in Sources */,
 				EB15F9BF1ADB11870097920B /* UIColor+GradientPoints.m in Sources */,
 				EB15F9C61ADB5CAE0097920B /* DemoMenuController.m in Sources */,
 				EB15F9C31ADB59660097920B /* MenuItem.m in Sources */,
