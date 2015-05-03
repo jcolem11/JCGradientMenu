@@ -1,5 +1,5 @@
 # JCGradientMenu
-A custom control for iOS. 
+A custom menu control for iOS. 
 <h2 align="center"> 
   <a href="http://imgur.com/ToPStWB"><img src="http://i.imgur.com/ToPStWB.gif?1" title="source: imgur.com" /></a>
 </h2>
