@@ -26,3 +26,11 @@ MenuItem *item = [[MenuItem alloc] initWithTitle:@"Log Out" action:^{
             [self logout]; 
         }];
 ```
+
+###Author
+Me :)
+Joshua Coleman. Shoot me an email if you have any questions
+
+###License, Blah, Blah, Blah...
+Licensed under MIT. If you're going to use this in a project I would love to know!
+https://twitter.com/_joshington
