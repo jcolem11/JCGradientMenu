@@ -17,6 +17,10 @@ Setting up GradientMenu is as easy as assigning it a start and endcolor as well 
 MenuItem *homeItem = [MenuItem alloc] initWithTitle:@"Home" action:^{NSLog(@"Home Pressed");}];
 self.menu.items = @[homeItem]; 
 ```
+####Misc. Properties
+@font:  The font that will be used for the MenuItem's titles.
+@titleColor: The font color of the MenuItem's titles.
+@animationDuration: The duration of the expand animation. 
 
 ###Menu Items
 Each opiton in the menu is represented by a MenuItem. A MenuItem has a title, an action that is performed upon pressing it, and a font (optional). MenuItems are created like so:
@@ -26,7 +30,6 @@ MenuItem *item = [[MenuItem alloc] initWithTitle:@"Log Out" action:^{
             [self logout]; 
         }];
 ```
-
 ##Author
 Me :)
 Joshua Coleman. Shoot me an email if you have any questions
