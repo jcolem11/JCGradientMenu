@@ -145,7 +145,7 @@
 - (void)expand{
     [self.menuItems enumerateObjectsUsingBlock:^(MenuItem *obj, NSUInteger idx, BOOL *stop) {
         CGFloat delay = (self.animationDuration/self.menuItems.count)*idx;
-        [UIView animateWithDuration:self.animationDuration delay:delay usingSpringWithDamping:.6 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:self.animationDuration delay:delay usingSpringWithDamping:.7 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseOut animations:^{
             obj.transform = CGAffineTransformTranslate(obj.transform, 0, (idx + 1) * -self.frame.size.height);
             self.expanded = YES;
         } completion:^(BOOL finished) {
