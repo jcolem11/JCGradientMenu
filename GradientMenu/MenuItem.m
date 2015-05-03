@@ -86,6 +86,7 @@
     [UIView animateWithDuration:.2 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:1 options:0 animations:^{
         self.currentTransform = self.transform;
         self.transform = CGAffineTransformScale(self.transform, 0.97, 0.97);
+        self.alpha = 0.8;
     } completion:^(BOOL finished) {
         
     }];
@@ -98,6 +99,7 @@
         [UIView animateWithDuration:.3 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:1 options:0 animations:^{
             self.currentTransform = self.currentTransform;
             self.transform = self.currentTransform;
+            self.alpha = 1.0; 
             if (self.action) {
                 self.action();
             }

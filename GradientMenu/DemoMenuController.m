@@ -22,8 +22,8 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.menu.startColor = [UIColor colorWithRed:0.4 green:0.2 blue:0.6 alpha:1];
-    self.menu.endColor = [UIColor colorWithRed:0.88 green:0.51 blue:0.51 alpha:1];
+    self.menu.startColor = [UIColor colorWithRed:0.88 green:0.51 blue:0.51 alpha:1];
+    self.menu.endColor = [UIColor colorWithRed:0.61 green:0.35 blue:0.71 alpha:1];
     self.menu.itemFont = [UIFont fontWithName:@"Avenir Next" size:18];
     
     NSMutableArray *array = [NSMutableArray array];
