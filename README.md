@@ -21,6 +21,7 @@ self.menu.items = @[homeItem];
 @font:  The font that will be used for the MenuItem's titles.
 
 @titleColor: The font color of the MenuItem's titles.
+
 @animationDuration: The duration of the expand animation. 
 
 ###Menu Items
