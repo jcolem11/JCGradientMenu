@@ -1,7 +1,7 @@
 # JCGradientMenu
 A custom menu control for iOS. 
 <h2 align="center"> 
-  <iframe src="//giphy.com/embed/3oEdv2DysFNIUY3hvi" width="480" height="705" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+ <img src = "http://imgur.com/cKFjW19" alt="Gif">
 </h2>
 
 ##Usage
