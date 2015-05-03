@@ -1,7 +1,7 @@
 # JCGradientMenu
 A custom menu control for iOS. 
 <h2 align="center"> 
- <img src = "http://imgur.com/cKFjW19" alt="Gif">
+ <img src="http://imgur.com/cKFjW19" alt="Gif">
 </h2>
 
 ##Usage
