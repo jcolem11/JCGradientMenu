@@ -34,6 +34,20 @@
         [array addObject:item];
     }
     self.menu.items = [NSArray arrayWithArray:array];
+    
+// Comment out this section to create a menu programatically
+//    
+//    GradientMenu *menu = [[GradientMenu alloc] initWithStartColor:[UIColor redColor] endColor:[UIColor blueColor]];
+//    menu.frame = CGRectMake(150, 350, 100, 35);
+//    [self.view addSubview:menu];
+//    
+//    MenuItem *item1 = [[MenuItem alloc] initWithTitle:@"Home" action:nil];
+//    MenuItem *item2 = [[MenuItem alloc] initWithTitle:@"Yo" action:nil];
+//    
+//    NSArray *itemArray = @[item1, item2];
+//    menu.items = itemArray;
+//
+//    
 }
 
 

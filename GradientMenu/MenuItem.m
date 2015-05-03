@@ -78,19 +78,8 @@
     [self addSubview:self.titleLabel];
 }
 
-#pragma mark - Touch Tracking
 
-- (void) jiggle{
-    [UIView animateWithDuration:.3 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:1 options:0 animations:^{
-        self.currentTransform = self.currentTransform;
-        self.transform = self.currentTransform;
-    } completion:^(BOOL finished) {
-        
-    }];
-    if (self.action) {
-        self.action();
-    }
-}
+#pragma mark - Touch Tracking
 
 -(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     [super beginTrackingWithTouch:touch withEvent:event];
@@ -105,7 +94,17 @@
 
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     [super endTrackingWithTouch:touch withEvent:event];
-    [self jiggle]; 
-
+    if ([self.delegate respondsToSelector:@selector(menuItemPressed)]) {
+        [UIView animateWithDuration:.3 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:1 options:0 animations:^{
+            self.currentTransform = self.currentTransform;
+            self.transform = self.currentTransform;
+            if (self.action) {
+                self.action();
+            }
+        } completion:^(BOOL finished) {
+            [self.delegate menuItemPressed];
+        }];
+        
+    }
 }
 @end
